@@ -66,19 +66,19 @@ resource "aws_instance" "vib_aws" {
   
 }
 
-variable "acc" {
+variable "AWS_Access_key" {
   type = string
 }
 
-variable "sec" {
+variable "AWS_secret_Key" {
   type = string
 }
 
-variable "key_p" {
+variable "ppk" {
   type = string
 }
 
 
-variable "key_p2" {
+variable "public" {
   type = string
 }
