@@ -50,12 +50,12 @@ resource "aws_instance" "vib_aws" {
   sudo systemctl enable tomcat
   sudo systemctl start tomcat
   cd /usr/share/tomcat/webapps/
-  sudo cp /tmp/spring-mvc-example.war /usr/share/tomcat/webapps/spring-mvc-example.war
+  sudo cp /tmp/PersistentWebApp.war /usr/share/tomcat/webapps/PersistentWebApp.war
   EOF
   
   provisioner "file" {
-    source      = "/var/lib/jenkins/workspace/vib_assign/target/spring-mvc-example.war"
-    destination = "/tmp/spring-mvc-example.war"
+    source      = "/var/lib/jenkins/workspace/Websapps/target/PersistentWebApp.war"
+    destination = "/tmp/PersistentWebApp.war"
     connection {
     type        = "ssh"
     user        = "ec2-user"
