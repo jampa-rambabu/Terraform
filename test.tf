@@ -25,7 +25,7 @@ output "AWS_Link" {
 }
 resource "aws_instance" "vib_aws" {
   key_name      = aws_key_pair.vib_aws.key_name
-  ami           = "ami-03c5cc3d1425c6d34"
+  ami           = "ami-047a51fa27710816e"
   instance_type = "t2.micro"
 
   tags = {
