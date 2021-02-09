@@ -21,7 +21,7 @@ resource "aws_key_pair" "vib_aws" {
 }
 output "AWS_Link" {
   //value = concat([aws_instance.ubuntu.public_dns,""],[":8080/spring-mvc-example",""])
-  value=format("Access the AWS hosted app from here: %s%s", aws_instance.vib_aws.public_dns, ":8080/spring-mvc-example")
+  value=format("Access the AWS hosted app from here: %s%s", aws_instance.vib_aws.public_dns, ":8080/PersistentWebApp")
 }
 resource "aws_instance" "vib_aws" {
   key_name      = aws_key_pair.vib_aws.key_name
