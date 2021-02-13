@@ -9,8 +9,8 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-    access_key = var.acc
-    secret_key = var.sec
+    access_key = var.access_key
+    secret_key = var.secret_key
     region = "us-east-1"
 }
 
@@ -66,11 +66,11 @@ resource "aws_instance" "vib_aws" {
   
 }
 
-variable "acc" {
+variable "access_key" {
   type = string
 }
 
-variable "sec" {
+variable "secret_key" {
   type = string
 }
 
